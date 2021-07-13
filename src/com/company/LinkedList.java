@@ -14,12 +14,11 @@ public class LinkedList<T> implements List<T> {
 
     private int size;
     private Node<T> head;
-    private Node<T> tail;
+
 
     public LinkedList() {
         size = 0;
         head = null;
-        tail = null;
     }
 
 
@@ -32,7 +31,7 @@ public class LinkedList<T> implements List<T> {
             Node<T> node = head;
             for (int i = 0; i < size - 1; i++)
                 node = node.next;
-            tail.next = new Node<T>(item);
+            node.next = new Node<T>(item);
             size++;
         }
     }
